@@ -1,19 +1,25 @@
 import React from "react";
-import { Container, Typography } from "@material-ui/core";
+import { Box, Container, Typography } from "@material-ui/core";
 import CatalogButton from "./CatalogButton";
 import mosaico from "../../assets/img/mosaico.jpg";
 
+
 export default function WoodInformation() {
   return (
-    <Container>
+    <Box sx={{display:"flex", flexDirection:"column", justifyContent:"center", textAlign:"center" , padding:"20px"}}>
       <img 
       src={mosaico} 
       alt="wood information" 
+      style={{width:"100%", marginTop:"10%"}}
       />
-      <Typography variant="h6">
-        asdfghjklñpoiuytrewqzxcvbnmkuytrewasfghjklkjnbvcxdfgthjkmnb
+      <Typography>
+        asdfghjkl ñpoiuy trew qzx cvb nmku ytrewasfg hjklkjnb vcxd fgthjkm nb
       </Typography>
+      <Box sx={{display:"flex", flexDirection:"column", justifyContent:"center", textAlign:"center" ,marginBottom:"20px"}}>
       <CatalogButton />
-    </Container>
+      </Box>
+    </Box>
+    
+   
   );
 }

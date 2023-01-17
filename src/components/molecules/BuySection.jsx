@@ -13,22 +13,22 @@ const images = [
   {
     url: '/src/assets/img/Habitacion.jpg',
     title: 'HABITACIÓN',
-    width: '30%',
+    width: '50%',
   },
   {
     url: '/src/assets/img/comedor.jpg',
     title: 'COMEDOR',
-    width: '30%',
+    width: '50%',
   },
   {
     url: '/src/assets/img/cocina.jpg',
     title: 'COCINA',
-    width: '30%',
+    width: '50%',
   },
   {
     url: '/src/assets/img/sala.jpg',
     title: 'SALA',
-    width: '30%',
+    width: '50%',
   },
 
 ];
@@ -98,13 +98,14 @@ const ImageMarked = styled('span')(({ theme }) => ({
 
 export default function ButtonBases() {
   return (
-    <Box sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 300, width: '100%' }}>
+    <Box sx={{ display: 'flex', flexWrap: 'wrap',  width: '100%' }}>
       {images.map((image) => (
         <ImageButton
           focusRipple
           key={image.title}
           style={{
-            width: image.width,
+            width:'50%',
+            xs: {width:'30%'}
           }}
         >
           <ImageSrc style={{ backgroundImage: `url(${image.url})` }} />

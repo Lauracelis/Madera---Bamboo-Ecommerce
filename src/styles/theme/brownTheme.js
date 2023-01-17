@@ -1,6 +1,7 @@
 import { createTheme } from "@mui/material/styles"
 
-export const Colors = {
+
+{/*export const Colors = {
     primary : "#A37F56",
     secondary: "#311815",
     button_pay: "#673C0B",
@@ -26,9 +27,20 @@ export const Colors = {
     ///////////////
     white: "#F2F2F2",
     black: "#000",
-  };
+  };*/}
 
-  const theme = createTheme({
+  const brownTheme = createTheme({
+    palette: {
+      primary: {
+        main: '#F2F2F2',
+      },
+      secondary: {
+        main: '#311815',
+      },
+      brown:{
+        main:'#A37F56'
+      }
+  }})
+  export default brownTheme;
 
-  })
-  export default theme;
+  
