@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Container, Typography } from "@material-ui/core";
-import CatalogButton from "./CatalogButton";
+import CatalogButton from "./button/CatalogButton";
 import mosaico from "../../assets/img/mosaico.jpg";
 
 

@@ -1,0 +1,81 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Comedor 4 personas",
+      "price": "50.000",
+      "category": "comedor",
+      "information": {
+        "info": "Perfecto para familias que disfrutan tiempo de calidad compartiendo juntos alrededor de la mesa. Mesa de comedor de 4 puestos fabricada en madera Pino Canadiense y pintada con pintura sellador y laca catalizada. No incluye accesorios ni decoración",
+        "cloth": "Jacquard",
+        "Wood": "Pino Canadiense"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Servilletero",
+      "price": "50.000",
+      "category": "comedor",
+      "information": {
+        "info": "Perfecto para familias que disfrutan tiempo de calidad compartiendo juntos alrededor de la mesa. Mesa de comedor de 4 puestos fabricada en madera Pino Canadiense y pintada con pintura sellador y laca catalizada. No incluye accesorios ni decoración",
+        "measures": "Las medidas son aproximadas de la mesa son: Ancho: 85 cm / Largo: 85 cm / Alto: 80cm",
+        "Wood": "Pino Canadiense"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Repisas",
+      "price": "25.000",
+      "category": "Habitación",
+      "information": {
+        "info": "Perfecto para familias que disfrutan tiempo de calidad compartiendo juntos alrededor de la mesa. Mesa de comedor de 4 puestos fabricada en madera Pino Canadiense y pintada con pintura sellador y laca catalizada. No incluye accesorios ni decoración",
+        "measures": "Las medidas son aproximadas de la mesa son: Ancho: 85 cm / Largo: 85 cm / Alto: 80cm",
+        "Wood": "Pino Canadiense"
+      }
+    },
+    {
+      "id": 5,
+      "title": "Bandejas",
+      "price": "25.000",
+      "category": "Cocina",
+      "information": {
+        "info": "Perfecto para familias que disfrutan tiempo de calidad compartiendo juntos alrededor de la mesa. Mesa de comedor de 4 puestos fabricada en madera Pino Canadiense y pintada con pintura sellador y laca catalizada. No incluye accesorios ni decoración",
+        "measures": "Las medidas son aproximadas de la mesa son: Ancho: 85 cm / Largo: 85 cm / Alto: 80cm",
+        "Wood": "Pino Canadiense"
+      }
+    },
+    {
+      "id": 6,
+      "title": "Especiero",
+      "price": "25.000",
+      "category": "Cocina",
+      "information": {
+        "info": "Perfecto para familias que disfrutan tiempo de calidad compartiendo juntos alrededor de la mesa. Mesa de comedor de 4 puestos fabricada en madera Pino Canadiense y pintada con pintura sellador y laca catalizada. No incluye accesorios ni decoración",
+        "measures": "Las medidas son aproximadas de la mesa son: Ancho: 85 cm / Largo: 85 cm / Alto: 80cm",
+        "Wood": "Pino Canadiense"
+      }
+    },
+    {
+      "id": 7,
+      "title": "Tabla de picar",
+      "price": "25.000",
+      "category": "Cocina",
+      "information": {
+        "info": "Perfecto para familias que disfrutan tiempo de calidad compartiendo juntos alrededor de la mesa. Mesa de comedor de 4 puestos fabricada en madera Pino Canadiense y pintada con pintura sellador y laca catalizada. No incluye accesorios ni decoración",
+        "measures": "Las medidas son aproximadas de la mesa son: Ancho: 85 cm / Largo: 85 cm / Alto: 80cm",
+        "Wood": "Bamboo"
+      }
+    },
+    {
+      "id": 8,
+      "title": "Matera",
+      "price": "25.000",
+      "category": "Sala",
+      "information": {
+        "info": "Perfecto para familias que disfrutan tiempo de calidad compartiendo juntos alrededor de la mesa. Mesa de comedor de 4 puestos fabricada en madera Pino Canadiense y pintada con pintura sellador y laca catalizada. No incluye accesorios ni decoración",
+        "measures": "Las medidas son aproximadas de la mesa son: Ancho: 85 cm / Largo: 85 cm / Alto: 80cm",
+        "Wood": "Pino Canadiense"
+      }
+    }
+  ]
+}

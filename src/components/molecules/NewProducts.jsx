@@ -1,17 +1,14 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
-import Divider from "@material-ui/core/Divider";
 import Grid from "@material-ui/core/Grid";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import TextInfoContent from "@mui-treasury/components/content/textInfo";
 import silla from "../../assets/img/silla.png";
-import CatalogButton from "../atoms/CatalogButton";
-import { Box, Button, IconButton } from "@mui/material";
-import logo from "../../assets/img/logo.png";
-import ShoppingCartRounded from "@material-ui/icons/ShoppingCartRounded";
+import CatalogButton from "../atoms/button/CatalogButton";
+
 
 const useStyles = makeStyles((theme) => ({
   container: {

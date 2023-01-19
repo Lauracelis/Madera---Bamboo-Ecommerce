@@ -15,9 +15,15 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
-import AddToCartButton from '../atoms/AddToCartButton';
+import AddToCartButton from '../atoms/button/AddToCartButton'
 import ShoppingCartRoundedIcon from "@material-ui/icons/ShoppingCartRounded";
 import PersonalizationButton from '../atoms/PersonalizationButton';
+
+
+
+
+
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
