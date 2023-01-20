@@ -1,14 +1,18 @@
 import React from "react";
 import CatalogGrid from "../organism/CatalogGrid";
-import Navbar from '../atoms/Navbar'
-import Footer from '../atoms/Footer'
+import Navbar from "../atoms/Navbar";
+import Footer from "../atoms/Footer";
+import {ProductCard} from "../molecules/ProductCard";
 
-export default function Catalogue(){
-    return(
-        <>
-        <Navbar />
-        <CatalogGrid />
-        <Footer />
-        </>
-    )
+export function Catalogue() {
+  return (
+    <>
+      <Navbar />
+    
+        {/* <CatalogGrid />  */}
+        
+      <ProductCard />
+      <Footer />
+    </>
+  );
 }

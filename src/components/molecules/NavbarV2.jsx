@@ -27,6 +27,7 @@ import ShoppingCartRoundedIcon from "@material-ui/icons/ShoppingCartRounded";
 import { Button, IconButton } from "@mui/material";
 import logo from "../../assets/img/logo.png";
 import { Container } from "@mui/system";
+import { ShoppingCarModal } from "./ShoppingCarModal";
 
 
 
@@ -109,9 +110,7 @@ export default function PersistentDrawerLeft() {
           <Box>
             <img src={logo} alt="Madera & Bamboo" />
             </Box>
-            <IconButton>
-              <ShoppingCartRoundedIcon />
-            </IconButton>
+            <ShoppingCarModal />
             
           
         </Toolbar>
