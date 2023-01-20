@@ -1,4 +1,5 @@
-export const productsReducer = ({ initialState = {}, action }) => {
+export const productsReducer = ( initialState = {}, action ) => {
+    console.log(action);
   switch (action.type) {
     case "[PRODUCT] add product":
       return [...initialState, action.payload];

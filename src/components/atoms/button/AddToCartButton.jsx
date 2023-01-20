@@ -3,22 +3,23 @@ import { Button } from "@mui/material";
 import { useProducts } from "../../../reducer/useProducts";
 
 export default function AddToCartButton({ product }) {
-  const { handleNewProduct } = useProducts();
-
-  console.log(product);
+  const { products, handleNewProduct } = useProducts();
 
   const addNewProductToShoppingCar = () => {
     const prod = {
-        id: product.id,
-        title: product.title,
-        price: product.price,
-    }
-    handleNewProduct(prod)
+      id: product.id,
+      title: product.title,
+      price: product.price,
+    };
+    handleNewProduct(prod);
+    console.log("🚀 ~ prod", prod);
   };
+  console.log("🚀 ~ products", products);
 
   return (
     <Button
       variant="contained"
+      onClick={addNewProductToShoppingCar}
       sx={{ borderColor: "#A37F56", height: "3rem", border: 2 }}
     >
       {" "}

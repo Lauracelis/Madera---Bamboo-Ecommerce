@@ -66,8 +66,8 @@ export const ProductCard = () => {
   return (
     <Grid container spacing={3}>
       {products.map((product) => (
-        <Grid item xs={9} lg={3} m={55}>
-          <Card className={classes.root} key={product.id}>
+        <Grid item xs={9} lg={3} m={55} key={product.id}>
+          <Card className={classes.root} >
             <CardHeader title={product.title} />
             <CardMedia
               className={classes.media}

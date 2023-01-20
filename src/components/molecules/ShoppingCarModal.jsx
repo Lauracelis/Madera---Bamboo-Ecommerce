@@ -1,6 +1,8 @@
 import { ShoppingCartRounded } from "@material-ui/icons";
 import { Box, IconButton, Modal, Typography } from "@mui/material";
 import { useState } from "react";
+import { productsReducer } from "../../reducer/productsReducer";
+import { useProducts } from "../../reducer/useProducts";
 
 export const ShoppingCarModal = () => {
   const [shopingCarOpen, setShopingCarOpen] = useState(false);
@@ -12,6 +14,9 @@ export const ShoppingCarModal = () => {
   const handleCloseCar = () => {
     setShopingCarOpen(false);
   };
+
+  const { products } = useProducts();
+  console.log("🚀 ~ products", products)
 
   return (
     <>
@@ -37,12 +42,7 @@ export const ShoppingCarModal = () => {
             p: 4,
           }}
         >
-          <Typography id="modal-modal-title" variant="h6" component="h2">
-            Text in a modal
-          </Typography>
-          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-          </Typography>
+          {products}
         </Box>
       </Modal>
     </>

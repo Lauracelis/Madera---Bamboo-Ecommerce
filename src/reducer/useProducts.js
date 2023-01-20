@@ -6,10 +6,11 @@ export const useProducts = () => {
     const [products, dispatch] = useReducer(productsReducer, [])
 
     const handleNewProduct = (product) => {
-        dispatch({
+        const action = {
             type: "[PRODUCT] add product",
-            payload: product
-        })
+            payload: product,
+        }
+        dispatch(action)
     }
     const handleRemoveProduct = (id) => {
         dispatch({
