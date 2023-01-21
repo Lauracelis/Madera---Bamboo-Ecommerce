@@ -1,8 +1,10 @@
-import { ShoppingCartRounded } from "@material-ui/icons";
+import { Button, ButtonGroup, CardMedia, Tooltip } from "@material-ui/core";
+import { Add, Delete, Remove, ShoppingCartRounded } from "@material-ui/icons";
 import { Box, IconButton, Modal, Typography } from "@mui/material";
 import { useState } from "react";
 import { productsReducer } from "../../reducer/productsReducer";
 import { useProducts } from "../../reducer/useProducts";
+import WathsappButton from "../atoms/button/WathsappButton";
 
 export const ShoppingCarModal = () => {
   const [shopingCarOpen, setShopingCarOpen] = useState(false);
@@ -16,7 +18,13 @@ export const ShoppingCarModal = () => {
   };
 
   const { products } = useProducts();
-  console.log("🚀 ~ products", products)
+  console.log("🚀 ~ products", products);
+
+  const prodsLocal = JSON.parse(localStorage.getItem("products")) || [];
+  console.log("🚀 ~ prodsLocal", prodsLocal);
+  // prodsLocal.map(a => {
+  //   (a !== undefined) ? console.log(a.img) : console.log("gg"); 
+  // })
 
   return (
     <>
@@ -42,7 +50,47 @@ export const ShoppingCarModal = () => {
             p: 4,
           }}
         >
-          {products}
+          <Box>
+          {prodsLocal.map((prod) => (
+            <>
+            <CardMedia key={prod.id}
+              component="img"
+              sx={{ width: 25 }}
+              image={prod.img}
+            />
+            <Typography >{prod.title}</Typography>
+            <Typography>{prod.price}</Typography>
+            <Tooltip title="Delete">
+              <IconButton>
+                <Delete />
+              </IconButton>
+            </Tooltip>
+            <Tooltip describeChild title="Agregar un nuevo producto">
+              <Button>Add</Button>
+            </Tooltip>
+            <ButtonGroup>
+          <Button
+            aria-label="reduce"
+            onClick={() => {
+              setCount(Math.max(count - 1, 0));
+            }}
+          >
+            <Remove fontSize="small" />
+          </Button>
+          <Button
+            aria-label="increase"
+            onClick={() => {
+              setCount(count + 1);
+            }}
+          >
+            <Add fontSize="small" />
+          </Button>
+        </ButtonGroup>
+            <WathsappButton />
+            </>
+              
+            ))}
+          </Box>
         </Box>
       </Modal>
     </>

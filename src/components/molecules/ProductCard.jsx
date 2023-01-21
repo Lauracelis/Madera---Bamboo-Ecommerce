@@ -64,26 +64,23 @@ export const ProductCard = () => {
   };
 
   return (
-    <Grid container spacing={3}>
+    <Box paddingBottom={59}>
+    <Grid container spacing={3} m={5}>
       {products.map((product) => (
-        <Grid item xs={9} lg={3} m={55} key={product.id}>
+        <Grid item xs={9} md={6} lg={3} m={5} key={product.id}>
           <Card className={classes.root} >
             <CardHeader title={product.title} />
             <CardMedia
               className={classes.media}
-              image="/src/assets/img/Producto1.jpeg"
+              image={product.img}
               title="comedor"
             />
 
             <CardContent>{product.information.price}</CardContent>
 
             <CardActions disableSpacing>
-              <IconButton aria-label="add to favorites">
-                <FavoriteIcon />
-              </IconButton>
-              <IconButton aria-label="share">
-                <ShoppingCartRoundedIcon />
-              </IconButton>
+              
+            <AddToCartButton product={product} />
               <IconButton
                 className={clsx(classes.expand, {
                   [classes.expandOpen]: expanded,
@@ -106,12 +103,12 @@ export const ProductCard = () => {
                   {product.information.measures}
                 </Typography>
               </CardContent>
-              <AddToCartButton product={product} />
               <PersonalizationButton />
             </Collapse>
           </Card>
         </Grid>
       ))}
     </Grid>
+    </Box>
   );
 };

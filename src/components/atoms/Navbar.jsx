@@ -1,92 +1,139 @@
-import React from "react";
-import PropTypes from "prop-types";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
-import { makeStyles } from "@material-ui/core/styles";
-import { Button } from "@mui/material";
-import IconButton from '@material-ui/core/IconButton'
-import useScrollTrigger from "@material-ui/core/useScrollTrigger";
-import Box from "@material-ui/core/Box";
-import Container from "@material-ui/core/Container";
-import Fab from "@material-ui/core/Fab";
-import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
-import Zoom from "@material-ui/core/Zoom";
+import {
+  Box,
+  Divider,
+  Drawer,
+  IconButton,
+  Link,
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+  styled,
+  Toolbar,
+} from "@material-ui/core";
+import {
+  ChevronLeft,
+  ChevronRight,
+  Inbox,
+  Mail,
+  Menu,
+} from "@mui/icons-material";
+import { ListItemButton, useTheme } from "@mui/material";
+import { Link as RouterLink } from "react-router-dom";
+import { ShoppingCarModal } from "../molecules/ShoppingCarModal";
+import MuiAppBar from "@mui/material/AppBar";
+import { useState } from "react";
 import logo from "../../assets/img/logo.png";
-import ShoppingCartRoundedIcon from "@material-ui/icons/ShoppingCartRounded";
-import MenuIcon from '@material-ui/icons/Menu'
 
-const useStyles = makeStyles((theme) => ({
-  
-    root: {
-    position: "fixed",
-    bottom: theme.spacing(2),
-    right: theme.spacing(2),
-}}));
 
-function ScrollTop(props) {
-  const { children, window } = props;
-  const classes = useStyles();
-  // Note that you normally won't need to set the window ref as useScrollTrigger
-  // will default to window.
-  // This is only being set here because the demo is in an iframe.
-  const trigger = useScrollTrigger({
-    target: window ? window() : undefined,
-    disableHysteresis: true,
-    threshold: 100,
-  });
+const drawerWidth = 240;
 
-  const handleClick = (event) => {
-    const anchor = (event.target.ownerDocument || document).querySelector(
-      "#back-to-top-anchor"
-    );
+const AppBar = styled(MuiAppBar, {
+  shouldForwardProp: (prop) => prop !== "open",
+})(({ theme, open }) => ({
+  transition: theme.transitions.create(["margin", "width"], {
+    easing: theme.transitions.easing.sharp,
+    duration: theme.transitions.duration.leavingScreen,
+  }),
+  ...(open && {
+    width: `calc(100% - ${drawerWidth}px)`,
+    marginLeft: `${drawerWidth}px`,
+    transition: theme.transitions.create(["margin", "width"], {
+      easing: theme.transitions.easing.easeOut,
+      duration: theme.transitions.duration.enteringScreen,
+    }),
+  }),
+}));
 
-    if (anchor) {
-      anchor.scrollIntoView({ behavior: "smooth", block: "center" });
-    }
+const DrawerHeader = styled("div")(({ theme }) => ({
+  display: "flex",
+  alignItems: "center",
+  padding: theme.spacing(0, 1),
+  // necessary for content to be below app bar
+  ...theme.mixins.toolbar,
+  justifyContent: "flex-end",
+}));
+
+export const Navbar = () => {
+  const theme = useTheme();
+  const [open, setOpen] = useState(false);
+
+  const handleDrawerOpen = () => {
+    setOpen(true);
   };
 
+  const handleDrawerClose = () => {
+    setOpen(false);
+  };
   return (
-    <Zoom in={trigger}>
-      <div onClick={handleClick} role="presentation" className={classes.root}>
-        {children}
-      </div>
-    </Zoom>
-  );
-}
-
-ScrollTop.propTypes = {
-  children: PropTypes.element.isRequired,
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
-  window: PropTypes.func,
-};
-
-export default function BackToTop(props) {
-  return (
-    <React.Fragment>
-      <AppBar>
-        <Toolbar>
-        <IconButton aria-label="menu">
-            <MenuIcon />
-        </IconButton>
-          <img src={logo} alt="Madera & Bamboo" />
-          {/*<Typography variant="h6">Acerca de nososotros</Typography>
-          <Typography variant="h6">Catálogo</Typography>*/}
-          <IconButton >
-          <ShoppingCartRoundedIcon />
+    <>
+      <AppBar position="fixed" open={open}>
+        <Toolbar sx={{ justifyContent: "space-between" }}>
+          <IconButton
+            color="inherit"
+            aria-label="open drawer"
+            onClick={handleDrawerOpen}
+            edge="start"
+            sx={{ mr: 2, ...(open && { display: "none" }) }}
+          >
+            <Menu />
           </IconButton>
-          {/*<Button variant="contained">contactar</Button>*/}
+
+          <Box>
+            <Link to={"home"} component={RouterLink}>
+              <img src={logo} alt="Madera & Bamboo" />
+            </Link>
+          </Box>
+          <ShoppingCarModal />
         </Toolbar>
       </AppBar>
-      <Toolbar id="back-to-top-anchor" />
-      <ScrollTop {...props}>
-        <Fab color="secondary" size="small" aria-label="scroll back to top">
-          <KeyboardArrowUpIcon />
-        </Fab>
-      </ScrollTop>
-    </React.Fragment>
+      <Drawer
+        sx={{
+          width: drawerWidth,
+          flexShrink: 0,
+          "& .MuiDrawer-paper": {
+            width: drawerWidth,
+            boxSizing: "border-box",
+          },
+        }}
+        variant="persistent"
+        anchor="left"
+        open={open}
+      >
+        <DrawerHeader>
+          <IconButton onClick={handleDrawerClose}>
+            {theme.direction === "ltr" ? <ChevronLeft /> : <ChevronRight />}
+          </IconButton>
+        </DrawerHeader>
+        <Divider />
+        <List>
+          {["Acerca de nosotros", "Catálogo", "Contactar"].map(
+            (text, index) => (
+              <ListItem key={text}>
+                <ListItemButton>
+                  <ListItemIcon>
+                    {index % 2 === 0 ? <Inbox /> : <Mail />}
+                  </ListItemIcon>
+                  <ListItemText primary={text} />
+                </ListItemButton>
+              </ListItem>
+            )
+          )}
+        </List>
+        <Divider />
+        <List>
+          {["All mail"].map((text, index) => (
+            <ListItem key={text}>
+              <ListItemButton>
+                <ListItemIcon>
+                  {index % 2 === 0 ? <Inbox /> : <Mail />}
+                </ListItemIcon>
+                <ListItemText primary={text} />
+              </ListItemButton>
+            </ListItem>
+          ))}
+        </List>
+      </Drawer>
+    </>
   );
-}
+};

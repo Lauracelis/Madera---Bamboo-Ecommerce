@@ -10,6 +10,7 @@ export default function AddToCartButton({ product }) {
       id: product.id,
       title: product.title,
       price: product.price,
+      img:product.img,
     };
     handleNewProduct(prod);
     console.log("🚀 ~ prod", prod);

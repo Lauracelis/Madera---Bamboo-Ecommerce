@@ -4,6 +4,7 @@
       "id": 1,
       "title": "Comedor 4 personas",
       "price": "50.000",
+      "img":"https://images.unsplash.com/photo-1602872030490-4a484a7b3ba6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
       "category": "comedor",
       "information": {
         "info": "Perfecto para familias que disfrutan tiempo de calidad compartiendo juntos alrededor de la mesa. Mesa de comedor de 4 puestos fabricada en madera Pino Canadiense y pintada con pintura sellador y laca catalizada. No incluye accesorios ni decoración",
@@ -16,6 +17,7 @@
       "id": 2,
       "title": "Servilletero",
       "price": "50.000",
+      "img":"https://http2.mlstatic.com/D_NQ_NP_994736-MLM46762039896_072021-V.jpg",
       "category": "comedor",
       "information": {
         "info": "Perfecto para familias que disfrutan tiempo de calidad compartiendo juntos alrededor de la mesa. Mesa de comedor de 4 puestos fabricada en madera Pino Canadiense y pintada con pintura sellador y laca catalizada. No incluye accesorios ni decoración",
@@ -27,6 +29,7 @@
       "id": 3,
       "title": "Repisas",
       "price": "25.000",
+      "img":"https://http2.mlstatic.com/D_NQ_NP_694710-MLM50854634318_072022-W.jpg",
       "category": "Habitación",
       "information": {
         "info": "Perfecto para familias que disfrutan tiempo de calidad compartiendo juntos alrededor de la mesa. Mesa de comedor de 4 puestos fabricada en madera Pino Canadiense y pintada con pintura sellador y laca catalizada. No incluye accesorios ni decoración",
@@ -35,9 +38,22 @@
       }
     },
     {
-      "id": 5,
+      "id": 4,
       "title": "Bandejas",
       "price": "25.000",
+      "img":"https://i.ytimg.com/vi/p69CdKQ56ow/maxresdefault.jpg",
+      "category": "Cocina",
+      "information": {
+        "info": "Perfecto para familias que disfrutan tiempo de calidad compartiendo juntos alrededor de la mesa. Mesa de comedor de 4 puestos fabricada en madera Pino Canadiense y pintada con pintura sellador y laca catalizada. No incluye accesorios ni decoración",
+        "measures": "Las medidas son aproximadas de la mesa son: Ancho: 85 cm / Largo: 85 cm / Alto: 80cm",
+        "Wood": "Pino Canadiense"
+      }
+    },
+    {
+      "id": 5,
+      "title": "Especiero",
+      "price": "25.000",
+      "img":"https://comunidad.leroymerlin.es/t5/image/serverpage/image-id/315063i02FBB07D17FF50F4?v=v2",
       "category": "Cocina",
       "information": {
         "info": "Perfecto para familias que disfrutan tiempo de calidad compartiendo juntos alrededor de la mesa. Mesa de comedor de 4 puestos fabricada en madera Pino Canadiense y pintada con pintura sellador y laca catalizada. No incluye accesorios ni decoración",
@@ -47,19 +63,9 @@
     },
     {
       "id": 6,
-      "title": "Especiero",
-      "price": "25.000",
-      "category": "Cocina",
-      "information": {
-        "info": "Perfecto para familias que disfrutan tiempo de calidad compartiendo juntos alrededor de la mesa. Mesa de comedor de 4 puestos fabricada en madera Pino Canadiense y pintada con pintura sellador y laca catalizada. No incluye accesorios ni decoración",
-        "measures": "Las medidas son aproximadas de la mesa son: Ancho: 85 cm / Largo: 85 cm / Alto: 80cm",
-        "Wood": "Pino Canadiense"
-      }
-    },
-    {
-      "id": 7,
       "title": "Tabla de picar",
       "price": "25.000",
+      "img":"https://www.mexidea.com/wp-content/uploads/2020/12/81ux2-n57vL._AC_SL1500_.jpg",
       "category": "Cocina",
       "information": {
         "info": "Perfecto para familias que disfrutan tiempo de calidad compartiendo juntos alrededor de la mesa. Mesa de comedor de 4 puestos fabricada en madera Pino Canadiense y pintada con pintura sellador y laca catalizada. No incluye accesorios ni decoración",
@@ -68,9 +74,10 @@
       }
     },
     {
-      "id": 8,
+      "id": 7,
       "title": "Matera",
       "price": "25.000",
+      "img":"https://www.craftcolombia.com/wp-content/uploads/2021/01/Matera-de-piso-contemporanea-zen-tienda-online-de-decoracion-y-mobiliario-craft-colombia.jpg",
       "category": "Sala",
       "information": {
         "info": "Perfecto para familias que disfrutan tiempo de calidad compartiendo juntos alrededor de la mesa. Mesa de comedor de 4 puestos fabricada en madera Pino Canadiense y pintada con pintura sellador y laca catalizada. No incluye accesorios ni decoración",
