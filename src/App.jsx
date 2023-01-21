@@ -1,11 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Button from '@material-ui/core/Button';
+import React from "react";
+import Home from "./components/page/Home";
+import { Catalogue } from "./components/page/Catalogue";
+import { Routes, Route, Link, Navigate } from "react-router-dom";
+import Footer from "./components/atoms/Footer";
+import { ShoppingCarProvider } from "./context/ShoppingCarProvider";
+import { Navbar } from "./components/atoms/Navbar";
 
 export default function App() {
   return (
-    <Button variant="contained" color="primary">
-      Hello World
-    </Button>
+    <ShoppingCarProvider>
+      <Navbar />
+
+      <Routes>
+        <Route path="home" element={<Home />} />
+        <Route path="/catalogue" element={<Catalogue />} />
+        <Route path="/*" element={<Navigate to="home" />} />
+      </Routes>
+    </ShoppingCarProvider>
   );
 }
